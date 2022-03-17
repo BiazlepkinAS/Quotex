@@ -7,15 +7,20 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-
+class MainViewController: UINavigationController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
+        prepareUI()
+        
     }
-
-
+    
+    private func prepareUI() {
+        
+        self.view.backgroundColor = .red
+        navigationBar.isHidden = true
+        self.modalPresentationStyle = .fullScreen
+    }
 }
 

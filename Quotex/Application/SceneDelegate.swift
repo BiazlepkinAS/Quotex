@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         self.window = self.window ?? UIWindow()
-        self.window!.backgroundColor = UIColor(red: 0.898, green: 0.898, blue: 0.898, alpha: 1)
+        self.window!.backgroundColor = UIColor(red: 29/255, green: 40/255, blue: 51/255, alpha: 1)
         
         self.window!.rootViewController = LoadViewController()
 

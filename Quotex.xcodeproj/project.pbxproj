@@ -26,7 +26,6 @@
 		09C072AB27E339AA00C528FB /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 09C072A227E339AA00C528FB /* SFPRODISPLAYMEDIUM.OTF */; };
 		09C072AC27E339AA00C528FB /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 09C072A327E339AA00C528FB /* SFPRODISPLAYULTRALIGHTITALIC.OTF */; };
 		09C072B327E33BF400C528FB /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C072B227E33BF400C528FB /* LoadViewController.swift */; };
-		09C072B527E341B100C528FB /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C072B427E341B100C528FB /* CustomProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		09C072A227E339AA00C528FB /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		09C072A327E339AA00C528FB /* SFPRODISPLAYULTRALIGHTITALIC.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYULTRALIGHTITALIC.OTF; sourceTree = "<group>"; };
 		09C072B227E33BF400C528FB /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
-		09C072B427E341B100C528FB /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				09C072AE27E339F700C528FB /* Extentions */,
-				09C072B427E341B100C528FB /* CustomProgressView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -367,7 +364,6 @@
 				09AE96CF27E3252300EA7200 /* MainViewController.swift in Sources */,
 				09AE96CB27E3252300EA7200 /* AppDelegate.swift in Sources */,
 				09C072B327E33BF400C528FB /* LoadViewController.swift in Sources */,
-				09C072B527E341B100C528FB /* CustomProgressView.swift in Sources */,
 				09AE96CD27E3252300EA7200 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

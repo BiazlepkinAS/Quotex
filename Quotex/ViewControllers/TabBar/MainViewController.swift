@@ -30,7 +30,6 @@ class MainViewController: UINavigationController {
     private lazy var currencyTableView: UITableView = {
         let table = UITableView()
         table.backgroundColor = .green
-        
         return table
     }()
      
@@ -52,7 +51,7 @@ class MainViewController: UINavigationController {
         
         view.addSubview(cashLabel)
         cashLabel.translatesAutoresizingMaskIntoConstraints = false
-        cashLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+        cashLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
         cashLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 111).isActive = true
         cashLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -111).isActive = true
         cashLabel.heightAnchor.constraint(equalToConstant: 22).isActive = true
@@ -69,7 +68,32 @@ class MainViewController: UINavigationController {
         currencyTableView.topAnchor.constraint(equalTo: choosenLabel.bottomAnchor, constant: 16).isActive = true
         currencyTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8).isActive = true
         currencyTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        currencyTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        currencyTableView.delegate = self
+        currencyTableView.dataSource = self
+        currencyTableView.register(CurrentCell.self, forCellReuseIdentifier: "CurrentCell")
         
     }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentCell", for: indexPath) as! CurrentCell
+        
+        
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
 }
 

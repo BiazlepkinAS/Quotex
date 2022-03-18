@@ -46,8 +46,7 @@ class LoadViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationBar.isHidden = true
+        navigationBar.isHidden = true
         
         prepareUI()
         
@@ -104,7 +103,41 @@ class LoadViewController: UINavigationController {
         } else {
             minValue = 0
             downLoader.invalidate()
-            present(MainViewController(), animated: true)
+//            present(TabBarViewController(), animated: true)
+            createtabBarController()
+            
         }
+    }
+    
+    private func createtabBarController() {
+        
+        let mainVC = MainViewController()
+        let historyVC = HistoryViewController()
+        let learnVC = LearningViewController()
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [mainVC, historyVC, learnVC]
+        
+//        guard let item = UITabBarItem() else {return}
+        
+        mainVC.title = "Main"
+        historyVC.title = "History"
+        learnVC.title = "Learn"
+    
+        tabBarController.setViewControllers([mainVC, historyVC, learnVC], animated: true)
+        
+        guard let items = tabBarController.tabBar.items else { return }
+        let images = ["house", "clock.arrow.2.circlepath", "graduationcap"]
+        
+        for x in 0..<items.count {
+            
+            items[x].image = UIImage(systemName: images[x])
+        }
+        tabBarController.tabBar.barTintColor = .white
+        tabBarController.tabBar.tintColor = .green
+        tabBarController.modalPresentationStyle = .fullScreen
+        tabBarController.tabBar.frame.size.height = 83
+        present(tabBarController, animated: true)
+        
     }
 }
